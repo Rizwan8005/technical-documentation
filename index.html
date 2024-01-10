@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <img src="/images//coinlogo.png" alt="logo" class="logo" />
+      </div>
+      <!-- main heading -->
+      <p class="main-heading">Technical Documentation</p>
+    </nav>
+    <div class="main-container">
+      <div class="sidebar">
+        <p class="content-list-heading">List of Contents</p>
+        <ul>
+          <li><a href="#project-setup">- Project Setup</a></li>
+          <li>
+            <a href="#react-deployment">- React Application Deployment</a>
+          </li>
+          <li>
+            <a href="#folder-structure">- Folder Structure for ReactJS</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <!-- project setup -->
+        <section
+          class="deployment-instruction content-section"
+          id="project-setup"
+        >
+          <h1>Project Setup</h1>
+          <ol>
+            <li>
+              Download Visual Studio Code from:
+              <a href="https://code.visualstudio.com/Download" target="_blank"
+                >https://code.visualstudio.com/Download</a
+              >
+            </li>
+            <li>
+              Download and install Node.js in your system from:
+              <a href="https://nodejs.org/en/download" target="_blank"
+                >https://nodejs.org/en/download</a
+              >
+            </li>
+            <li>Open project folder into VS Code.</li>
+            <li>Press 'ctrl + j' to open the terminal in VS Code.</li>
+            <li>
+              Type ‘node -v’ then npm -v if it shows you the versions it means
+              you have successfully installed the packages.
+            </li>
+            <li>
+              Run command 'npm i' in the terminal to install all the packages
+              required to run the app.
+            </li>
+            <li>Type npm start or yarn start for run project locally</li>
+          </ol>
+        </section>
+
+        <!-- React Application Deployment -->
+        <section
+          class="deployment-instruction content-section"
+          id="react-deployment"
+        >
+          <h1>React Application Deployment</h1>
+          <ol>
+            <li>
+              Press 'ctrl + j' to open the terminal in VS Code and run command
+              'npm run build', in the terminal, it will create a build folder.
+            </li>
+            <li>Convert the build folder into a zip folder.</li>
+            <li>
+              Sign in to your hosting, in my case my hosting is stackcp:
+              <a href="https://www.stackcp.com" target="_blank"
+                >https://www.stackcp.com</a
+              >
+            </li>
+            <li>
+              After signing up click on File Manager in Web Files then click on
+              public_html folder here remove unnecessary files and folders
+              except admin folder, cointracker folder, .htaccess file and
+              index.php file after deleting all files and folder click on below
+              Uploads button.
+            </li>
+            <li>
+              You will be redirected to this page:
+              <a
+                href="https://www.stackcp.com/services/6ff55fbb59b4085a/file-manager"
+                target="_blank"
+                >https://www.stackcp.com/services/6ff55fbb59b4085a/file-manager</a
+              >
+            </li>
+            <li>
+              Now open your project folder, drag your build folder into the
+              stackcp drag & drop circle.
+            </li>
+            <li>
+              After uploading the build folder you will get build folder in the
+              form of zip, right click on that folder and click on “Extract
+              Here” after extracting build folder you will get build folder
+              click on that folder copy all files and folder and then click on
+              public_html file and paste here that files and folder.
+            </li>
+            <li>
+              That's it! You have successfully deployed your ReactJS
+              application.
+            </li>
+          </ol>
+        </section>
+
+        <!-- Folder Structure for ReactJS -->
+        <section class="folder-structure content-section" id="folder-structure">
+          <h1 class="section-title">Folder Structure for ReactJS (Frontend)</h1>
+          <ul>
+            <li>
+              <strong>src:</strong> This is the main folder that contains all
+              the source code files for your React.js project.
+            </li>
+            <ul class="child-list">
+              <li>
+                <strong>index.js</strong>: The entry point of your application
+                where the ReactDOM renders your React components.
+              </li>
+              <li>
+                <strong>App.js</strong>: The root component of your application
+                that serves as the container for all other components.
+              </li>
+            </ul>
+            <li>
+              <strong>components:</strong> This folder contains reusable
+              components that are used throughout your application.
+            </li>
+            <li>
+              <strong>pages:</strong> This folder contains components that
+              represent different pages or views of your application.
+            </li>
+            <ul class="child-list">
+              <li>
+                <strong>Home.js:</strong> An example component representing the
+                home page.
+              </li>
+              <li>
+                <strong>About.js:</strong> An example component representing the
+                about page.
+              </li>
+            </ul>
+            <li>
+              <strong>assets:</strong> This folder contains static assets such
+              as images.
+            </li>
+            <li>
+              <strong>utils:</strong> This folder contains utility functions or
+              helper classes used throughout your application like dropdown menu
+              and modal etc.
+            </li>
+            <li>
+              <strong>Tailwind.config.js:</strong> This file contains all the
+              tailwind customizations.
+            </li>
+            <li>
+              <strong>routes:</strong> This folder contains the routing
+              configuration for your application.
+            </li>
+            <li>
+              <strong>store:</strong> This folder contains files related to
+              state management (Redux).
+            </li>
+            <ul class="child-list">
+              <li>
+                <strong>slices:</strong> This folder contains all the slices
+                each slice file holds its reducers and respective action
+                creators and index.jsx file in store folder is used to combine
+                all the slices in one file.
+              </li>
+              <li>
+                <strong>index.jsx:</strong> Combines all slices in one file.
+              </li>
+            </ul>
+            <li>
+              <strong>Data:</strong> Holds dummy data for the application.
+            </li>
+            <li>
+              <strong>index.html:</strong> HTML template file for rendering the
+              React application.
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>&copy; 2024 Coin Tracking Pro. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
